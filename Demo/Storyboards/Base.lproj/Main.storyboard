@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JSAnimatedView_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JSAnimatedView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yev-pP-llQ">
+                                <rect key="frame" x="117.5" y="70" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the image to pause/resume. Swipe to change GIF." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IT2-OY-x0d">
+                                <rect key="frame" x="44" y="106" width="287" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="Lmu-Bg-X5E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-fs-Xv0" customClass="AnimatedImageView" customModule="JSAnimatedView">
+                                <rect key="frame" x="0.0" y="192" width="375" height="300"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nzq-fs-Xv0" secondAttribute="height" multiplier="5:4" id="rxf-Mz-f6X"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8Pw-GW-7n8" appends="YES" id="aFv-wS-Xsa"/>
+                                    <outletCollection property="gestureRecognizers" destination="AWa-Vu-31f" appends="YES" id="uAB-jk-cl4"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ged-zf-KG0" appends="YES" id="OJd-nL-z9b"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yev-pP-llQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HIk-gP-jQ9"/>
+                            <constraint firstItem="nzq-fs-Xv0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hld-P0-33W"/>
+                            <constraint firstItem="nzq-fs-Xv0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KvT-r5-U6V"/>
+                            <constraint firstItem="IT2-OY-x0d" firstAttribute="top" secondItem="yev-pP-llQ" secondAttribute="bottom" constant="15" id="TJe-YO-Imt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nzq-fs-Xv0" secondAttribute="trailing" id="fZb-qH-5xL"/>
+                            <constraint firstItem="nzq-fs-Xv0" firstAttribute="top" secondItem="IT2-OY-x0d" secondAttribute="bottom" constant="50" id="gYQ-GJ-670"/>
+                            <constraint firstItem="IT2-OY-x0d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iR4-YR-mGV"/>
+                            <constraint firstItem="yev-pP-llQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tys-ok-dH1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animatedImageView" destination="nzq-fs-Xv0" id="WLv-hk-w1F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8Pw-GW-7n8">
+                    <connections>
+                        <action selector="toggleAnimation:" destination="BYZ-38-t0r" id="XYl-fw-Z8r"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="AWa-Vu-31f">
+                    <connections>
+                        <action selector="swapImage:" destination="BYZ-38-t0r" id="aLM-6e-Frh"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Ged-zf-KG0">
+                    <connections>
+                        <action selector="swapImage:" destination="BYZ-38-t0r" id="ynh-vV-nya"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="609" y="109"/>
         </scene>
     </scenes>
 </document>
