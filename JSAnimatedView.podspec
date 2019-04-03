@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.summary          = '一个简便易用的本地 GIF 播放框架。'
   
     s.description      = <<-DESC
-    一个简便易用的本地 GIF 播放框架。
+    一个简便易用的本地 GIF 播放框架，更低的CPU和内存占用，更加流畅的动画体验。
                          DESC
   
     s.homepage         = 'https://github.com/spirit-jsb/JSAnimatedView.git'
