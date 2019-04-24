@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/language-swift-red.svg"></a>
-<a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/swift%20version-4.2-orange.svg"></a>
+<a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/swift%20version-5.0-orange.svg"></a>
 <a href="https://github.com/spirit-jsb/JSAnimatedView/"><img src="https://img.shields.io/cocoapods/v/JSAnimatedView.svg?style=flat"></a>
 <a href="https://github.com/spirit-jsb/JSAnimatedView/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/JSAnimatedView.svg?style=flat"></a>
 <a href="https://cocoapods.org/pods/JSAnimatedView"><img src="https://img.shields.io/cocoapods/p/JSAnimatedView.svg?style=flat"></a>
@@ -44,18 +44,19 @@ let onlyFirstFrame: Bool
 | Swift | JSAnimatedView |
 | ------| ---------------|
 | 4.2   | >= 1.0.0       |
+| 5.0   | >= 1.1.0       |
 
 ## 限制条件
 * **iOS 9.0** and Up
 * **Xcode 10.0** and Up
-* **Swift Version = 4.2**
+* **Swift Version = 5.0**
 
 ## 安装
 
 `JSAnimatedView` 可以通过 [CocoaPods](https://cocoapods.org) 获得。安装只需要在你项目的 `Podfile` 中添加如下字段：
 
 ```ruby
-pod 'JSAnimatedView', '~> 1.0.0'
+pod 'JSAnimatedView', '~> 1.1.0'
 ```
 
 ## 作者
